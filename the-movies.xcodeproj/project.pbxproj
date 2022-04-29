@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		401852DECDA7531FD3A67755 /* Pods_the_movies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 098F6C4E51D187BCA737940B /* Pods_the_movies.framework */; };
+		4CEE1046281ACF73003111BF /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEE1045281ACF73003111BF /* TableCell.swift */; };
+		4CF8E8AE281A702A005BF7D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8E8AD281A702A005BF7D5 /* AppDelegate.swift */; };
+		4CF8E8B2281A702A005BF7D5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8E8B1281A702A005BF7D5 /* MainVC.swift */; };
+		4CF8E8B8281A702A005BF7D5 /* the_movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8E8B6281A702A005BF7D5 /* the_movies.xcdatamodeld */; };
+		4CF8E8BA281A7030005BF7D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8B9281A7030005BF7D5 /* Assets.xcassets */; };
+		4CF8E8BD281A7030005BF7D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8BB281A7030005BF7D5 /* LaunchScreen.storyboard */; };
+		4CF8E8DE281A711C005BF7D5 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8C5281A711B005BF7D5 /* DMSans-Regular.ttf */; };
+		4CF8E8DF281A711C005BF7D5 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8C6281A711B005BF7D5 /* DMSans-Medium.ttf */; };
+		4CF8E8E0281A711C005BF7D5 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8C7281A711B005BF7D5 /* DMSans-Bold.ttf */; };
+		4CF8E8E1281A711C005BF7D5 /* DMSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8C8281A711B005BF7D5 /* DMSans-BoldItalic.ttf */; };
+		4CF8E8E2281A711C005BF7D5 /* DMSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8C9281A711B005BF7D5 /* DMSans-MediumItalic.ttf */; };
+		4CF8E8E3281A711C005BF7D5 /* DMSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8CA281A711B005BF7D5 /* DMSans-Italic.ttf */; };
+		4CF8E8E4281A711C005BF7D5 /* WorkSans-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8CC281A711C005BF7D5 /* WorkSans-ExtraLightItalic.otf */; };
+		4CF8E8E5281A711C005BF7D5 /* WorkSans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8CD281A711C005BF7D5 /* WorkSans-Medium.otf */; };
+		4CF8E8E6281A711C005BF7D5 /* WorkSans-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8CE281A711C005BF7D5 /* WorkSans-BoldItalic.otf */; };
+		4CF8E8E7281A711C005BF7D5 /* WorkSans-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8CF281A711C005BF7D5 /* WorkSans-ExtraLight.otf */; };
+		4CF8E8E8281A711C005BF7D5 /* WorkSans-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8D0281A711C005BF7D5 /* WorkSans-ThinItalic.otf */; };
+		4CF8E8E9281A711C005BF7D5 /* WorkSans-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8D1281A711C005BF7D5 /* WorkSans-ExtraBold.otf */; };
+		4CF8E8EA281A711C005BF7D5 /* WorkSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8D2281A711C005BF7D5 /* WorkSans-Light.otf */; };
+		4CF8E8EB281A711C005BF7D5 /* WorkSans-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8D3281A711C005BF7D5 /* WorkSans-MediumItalic.otf */; };
+		4CF8E8EC281A711C005BF7D5 /* WorkSans-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8D4281A711C005BF7D5 /* WorkSans-SemiBoldItalic.otf */; };
+		4CF8E8ED281A711C005BF7D5 /* WorkSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8D5281A711C005BF7D5 /* WorkSans-Regular.otf */; };
+		4CF8E8EE281A711C005BF7D5 /* WorkSans-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8D6281A711C005BF7D5 /* WorkSans-ExtraBoldItalic.otf */; };
+		4CF8E8EF281A711C005BF7D5 /* WorkSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8D7281A711C005BF7D5 /* WorkSans-Bold.otf */; };
+		4CF8E8F0281A711C005BF7D5 /* WorkSans-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8D8281A711C005BF7D5 /* WorkSans-Thin.otf */; };
+		4CF8E8F1281A711C005BF7D5 /* WorkSans-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8D9281A711C005BF7D5 /* WorkSans-Black.otf */; };
+		4CF8E8F2281A711C005BF7D5 /* WorkSans-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8DA281A711C005BF7D5 /* WorkSans-LightItalic.otf */; };
+		4CF8E8F3281A711C005BF7D5 /* WorkSans-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8DB281A711C005BF7D5 /* WorkSans-Italic.otf */; };
+		4CF8E8F4281A711C005BF7D5 /* WorkSans-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8DC281A711C005BF7D5 /* WorkSans-BlackItalic.otf */; };
+		4CF8E8F5281A711C005BF7D5 /* WorkSans-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CF8E8DD281A711C005BF7D5 /* WorkSans-SemiBold.otf */; };
+		4CF8E8FC281A725E005BF7D5 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8E8FB281A725E005BF7D5 /* DetailsVC.swift */; };
+		4CF8E902281A7538005BF7D5 /* Presentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8E8FE281A7538005BF7D5 /* Presentation.swift */; };
+		4CF8E903281A7538005BF7D5 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8E8FF281A7538005BF7D5 /* Functions.swift */; };
+		4CF8E904281A7538005BF7D5 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8E900281A7538005BF7D5 /* Globals.swift */; };
+		4CF8E905281A7538005BF7D5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF8E901281A7538005BF7D5 /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		098F6C4E51D187BCA737940B /* Pods_the_movies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_the_movies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CEE1045281ACF73003111BF /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		4CF8E8AA281A702A005BF7D5 /* the-movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "the-movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF8E8AD281A702A005BF7D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CF8E8B1281A702A005BF7D5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		4CF8E8B7281A702A005BF7D5 /* the_movies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = the_movies.xcdatamodel; sourceTree = "<group>"; };
+		4CF8E8B9281A7030005BF7D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CF8E8BC281A7030005BF7D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CF8E8BE281A7030005BF7D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CF8E8C5281A711B005BF7D5 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		4CF8E8C6281A711B005BF7D5 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		4CF8E8C7281A711B005BF7D5 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		4CF8E8C8281A711B005BF7D5 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4CF8E8C9281A711B005BF7D5 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		4CF8E8CA281A711B005BF7D5 /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
+		4CF8E8CC281A711C005BF7D5 /* WorkSans-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		4CF8E8CD281A711C005BF7D5 /* WorkSans-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Medium.otf"; sourceTree = "<group>"; };
+		4CF8E8CE281A711C005BF7D5 /* WorkSans-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-BoldItalic.otf"; sourceTree = "<group>"; };
+		4CF8E8CF281A711C005BF7D5 /* WorkSans-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraLight.otf"; sourceTree = "<group>"; };
+		4CF8E8D0281A711C005BF7D5 /* WorkSans-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ThinItalic.otf"; sourceTree = "<group>"; };
+		4CF8E8D1281A711C005BF7D5 /* WorkSans-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraBold.otf"; sourceTree = "<group>"; };
+		4CF8E8D2281A711C005BF7D5 /* WorkSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Light.otf"; sourceTree = "<group>"; };
+		4CF8E8D3281A711C005BF7D5 /* WorkSans-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-MediumItalic.otf"; sourceTree = "<group>"; };
+		4CF8E8D4281A711C005BF7D5 /* WorkSans-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		4CF8E8D5281A711C005BF7D5 /* WorkSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.otf"; sourceTree = "<group>"; };
+		4CF8E8D6281A711C005BF7D5 /* WorkSans-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		4CF8E8D7281A711C005BF7D5 /* WorkSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.otf"; sourceTree = "<group>"; };
+		4CF8E8D8281A711C005BF7D5 /* WorkSans-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Thin.otf"; sourceTree = "<group>"; };
+		4CF8E8D9281A711C005BF7D5 /* WorkSans-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Black.otf"; sourceTree = "<group>"; };
+		4CF8E8DA281A711C005BF7D5 /* WorkSans-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-LightItalic.otf"; sourceTree = "<group>"; };
+		4CF8E8DB281A711C005BF7D5 /* WorkSans-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Italic.otf"; sourceTree = "<group>"; };
+		4CF8E8DC281A711C005BF7D5 /* WorkSans-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-BlackItalic.otf"; sourceTree = "<group>"; };
+		4CF8E8DD281A711C005BF7D5 /* WorkSans-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-SemiBold.otf"; sourceTree = "<group>"; };
+		4CF8E8FB281A725E005BF7D5 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		4CF8E8FE281A7538005BF7D5 /* Presentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentation.swift; sourceTree = "<group>"; };
+		4CF8E8FF281A7538005BF7D5 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		4CF8E900281A7538005BF7D5 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		4CF8E901281A7538005BF7D5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		87331125F24C9309F45686F4 /* Pods-the-movies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the-movies.debug.xcconfig"; path = "Target Support Files/Pods-the-movies/Pods-the-movies.debug.xcconfig"; sourceTree = "<group>"; };
+		C000485609F9C4F179CC59D3 /* Pods-the-movies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the-movies.release.xcconfig"; path = "Target Support Files/Pods-the-movies/Pods-the-movies.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CF8E8A7281A702A005BF7D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				401852DECDA7531FD3A67755 /* Pods_the_movies.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CF8E8A1281A702A005BF7D5 = {
+			isa = PBXGroup;
+			children = (
+				4CF8E8AC281A702A005BF7D5 /* the-movies */,
+				4CF8E8AB281A702A005BF7D5 /* Products */,
+				A14EF6555F311754ADF557E7 /* Pods */,
+				EC50DABD1FF10EB4152583BF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4CF8E8AB281A702A005BF7D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8E8AA281A702A005BF7D5 /* the-movies.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CF8E8AC281A702A005BF7D5 /* the-movies */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8E8FA281A71B6005BF7D5 /* Delegate */,
+				4CF8E8F7281A717E005BF7D5 /* Controllers */,
+				4CF8E8F8281A7188005BF7D5 /* Cell */,
+				4CF8E8FD281A751D005BF7D5 /* Helpers */,
+				4CF8E8F6281A7120005BF7D5 /* Font */,
+				4CF8E8F9281A718E005BF7D5 /* Core Data */,
+				4CF8E8B9281A7030005BF7D5 /* Assets.xcassets */,
+				4CF8E8BB281A7030005BF7D5 /* LaunchScreen.storyboard */,
+				4CF8E8BE281A7030005BF7D5 /* Info.plist */,
+			);
+			path = "the-movies";
+			sourceTree = "<group>";
+		};
+		4CF8E8C4281A711B005BF7D5 /* DM Sans */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8E8C5281A711B005BF7D5 /* DMSans-Regular.ttf */,
+				4CF8E8C6281A711B005BF7D5 /* DMSans-Medium.ttf */,
+				4CF8E8C7281A711B005BF7D5 /* DMSans-Bold.ttf */,
+				4CF8E8C8281A711B005BF7D5 /* DMSans-BoldItalic.ttf */,
+				4CF8E8C9281A711B005BF7D5 /* DMSans-MediumItalic.ttf */,
+				4CF8E8CA281A711B005BF7D5 /* DMSans-Italic.ttf */,
+			);
+			path = "DM Sans";
+			sourceTree = "<group>";
+		};
+		4CF8E8CB281A711C005BF7D5 /* WorkSans */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8E8CC281A711C005BF7D5 /* WorkSans-ExtraLightItalic.otf */,
+				4CF8E8CD281A711C005BF7D5 /* WorkSans-Medium.otf */,
+				4CF8E8CE281A711C005BF7D5 /* WorkSans-BoldItalic.otf */,
+				4CF8E8CF281A711C005BF7D5 /* WorkSans-ExtraLight.otf */,
+				4CF8E8D0281A711C005BF7D5 /* WorkSans-ThinItalic.otf */,
+				4CF8E8D1281A711C005BF7D5 /* WorkSans-ExtraBold.otf */,
+				4CF8E8D2281A711C005BF7D5 /* WorkSans-Light.otf */,
+				4CF8E8D3281A711C005BF7D5 /* WorkSans-MediumItalic.otf */,
+				4CF8E8D4281A711C005BF7D5 /* WorkSans-SemiBoldItalic.otf */,
+				4CF8E8D5281A711C005BF7D5 /* WorkSans-Regular.otf */,
+				4CF8E8D6281A711C005BF7D5 /* WorkSans-ExtraBoldItalic.otf */,
+				4CF8E8D7281A711C005BF7D5 /* WorkSans-Bold.otf */,
+				4CF8E8D8281A711C005BF7D5 /* WorkSans-Thin.otf */,
+				4CF8E8D9281A711C005BF7D5 /* WorkSans-Black.otf */,
+				4CF8E8DA281A711C005BF7D5 /* WorkSans-LightItalic.otf */,
+				4CF8E8DB281A711C005BF7D5 /* WorkSans-Italic.otf */,
+				4CF8E8DC281A711C005BF7D5 /* WorkSans-BlackItalic.otf */,
+				4CF8E8DD281A711C005BF7D5 /* WorkSans-SemiBold.otf */,
+			);
+			path = WorkSans;
+			sourceTree = "<group>";
+		};
+		4CF8E8F6281A7120005BF7D5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8E8CB281A711C005BF7D5 /* WorkSans */,
+				4CF8E8C4281A711B005BF7D5 /* DM Sans */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		4CF8E8F7281A717E005BF7D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8E8B1281A702A005BF7D5 /* MainVC.swift */,
+				4CF8E8FB281A725E005BF7D5 /* DetailsVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4CF8E8F8281A7188005BF7D5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4CEE1045281ACF73003111BF /* TableCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4CF8E8F9281A718E005BF7D5 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8E8B6281A702A005BF7D5 /* the_movies.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		4CF8E8FA281A71B6005BF7D5 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8E8AD281A702A005BF7D5 /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		4CF8E8FD281A751D005BF7D5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8E901281A7538005BF7D5 /* Extensions.swift */,
+				4CF8E8FF281A7538005BF7D5 /* Functions.swift */,
+				4CF8E900281A7538005BF7D5 /* Globals.swift */,
+				4CF8E8FE281A7538005BF7D5 /* Presentation.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A14EF6555F311754ADF557E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87331125F24C9309F45686F4 /* Pods-the-movies.debug.xcconfig */,
+				C000485609F9C4F179CC59D3 /* Pods-the-movies.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC50DABD1FF10EB4152583BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				098F6C4E51D187BCA737940B /* Pods_the_movies.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CF8E8A9281A702A005BF7D5 /* the-movies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CF8E8C1281A7030005BF7D5 /* Build configuration list for PBXNativeTarget "the-movies" */;
+			buildPhases = (
+				0F5C5A2D643E12527B8E629A /* [CP] Check Pods Manifest.lock */,
+				4CF8E8A6281A702A005BF7D5 /* Sources */,
+				4CF8E8A7281A702A005BF7D5 /* Frameworks */,
+				4CF8E8A8281A702A005BF7D5 /* Resources */,
+				E54DDF1E9E985A4E34ADD1B2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "the-movies";
+			productName = "the-movies";
+			productReference = 4CF8E8AA281A702A005BF7D5 /* the-movies.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CF8E8A2281A702A005BF7D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					4CF8E8A9281A702A005BF7D5 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4CF8E8A5281A702A005BF7D5 /* Build configuration list for PBXProject "the-movies" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CF8E8A1281A702A005BF7D5;
+			productRefGroup = 4CF8E8AB281A702A005BF7D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CF8E8A9281A702A005BF7D5 /* the-movies */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CF8E8A8281A702A005BF7D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CF8E8DE281A711C005BF7D5 /* DMSans-Regular.ttf in Resources */,
+				4CF8E8E0281A711C005BF7D5 /* DMSans-Bold.ttf in Resources */,
+				4CF8E8EE281A711C005BF7D5 /* WorkSans-ExtraBoldItalic.otf in Resources */,
+				4CF8E8E2281A711C005BF7D5 /* DMSans-MediumItalic.ttf in Resources */,
+				4CF8E8E6281A711C005BF7D5 /* WorkSans-BoldItalic.otf in Resources */,
+				4CF8E8DF281A711C005BF7D5 /* DMSans-Medium.ttf in Resources */,
+				4CF8E8E9281A711C005BF7D5 /* WorkSans-ExtraBold.otf in Resources */,
+				4CF8E8E4281A711C005BF7D5 /* WorkSans-ExtraLightItalic.otf in Resources */,
+				4CF8E8F5281A711C005BF7D5 /* WorkSans-SemiBold.otf in Resources */,
+				4CF8E8BD281A7030005BF7D5 /* LaunchScreen.storyboard in Resources */,
+				4CF8E8F0281A711C005BF7D5 /* WorkSans-Thin.otf in Resources */,
+				4CF8E8EC281A711C005BF7D5 /* WorkSans-SemiBoldItalic.otf in Resources */,
+				4CF8E8E8281A711C005BF7D5 /* WorkSans-ThinItalic.otf in Resources */,
+				4CF8E8EA281A711C005BF7D5 /* WorkSans-Light.otf in Resources */,
+				4CF8E8F3281A711C005BF7D5 /* WorkSans-Italic.otf in Resources */,
+				4CF8E8E7281A711C005BF7D5 /* WorkSans-ExtraLight.otf in Resources */,
+				4CF8E8BA281A7030005BF7D5 /* Assets.xcassets in Resources */,
+				4CF8E8F4281A711C005BF7D5 /* WorkSans-BlackItalic.otf in Resources */,
+				4CF8E8EF281A711C005BF7D5 /* WorkSans-Bold.otf in Resources */,
+				4CF8E8EB281A711C005BF7D5 /* WorkSans-MediumItalic.otf in Resources */,
+				4CF8E8ED281A711C005BF7D5 /* WorkSans-Regular.otf in Resources */,
+				4CF8E8E3281A711C005BF7D5 /* DMSans-Italic.ttf in Resources */,
+				4CF8E8F2281A711C005BF7D5 /* WorkSans-LightItalic.otf in Resources */,
+				4CF8E8F1281A711C005BF7D5 /* WorkSans-Black.otf in Resources */,
+				4CF8E8E5281A711C005BF7D5 /* WorkSans-Medium.otf in Resources */,
+				4CF8E8E1281A711C005BF7D5 /* DMSans-BoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F5C5A2D643E12527B8E629A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-the-movies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E54DDF1E9E985A4E34ADD1B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-the-movies/Pods-the-movies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-the-movies/Pods-the-movies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-the-movies/Pods-the-movies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CF8E8A6281A702A005BF7D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CEE1046281ACF73003111BF /* TableCell.swift in Sources */,
+				4CF8E8B2281A702A005BF7D5 /* MainVC.swift in Sources */,
+				4CF8E8FC281A725E005BF7D5 /* DetailsVC.swift in Sources */,
+				4CF8E8AE281A702A005BF7D5 /* AppDelegate.swift in Sources */,
+				4CF8E905281A7538005BF7D5 /* Extensions.swift in Sources */,
+				4CF8E902281A7538005BF7D5 /* Presentation.swift in Sources */,
+				4CF8E8B8281A702A005BF7D5 /* the_movies.xcdatamodeld in Sources */,
+				4CF8E904281A7538005BF7D5 /* Globals.swift in Sources */,
+				4CF8E903281A7538005BF7D5 /* Functions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4CF8E8BB281A7030005BF7D5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CF8E8BC281A7030005BF7D5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CF8E8BF281A7030005BF7D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4CF8E8C0281A7030005BF7D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CF8E8C2281A7030005BF7D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87331125F24C9309F45686F4 /* Pods-the-movies.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJHBCYFXP8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "the-movies/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.beytullahozer.the-movies";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4CF8E8C3281A7030005BF7D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C000485609F9C4F179CC59D3 /* Pods-the-movies.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LJHBCYFXP8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "the-movies/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.beytullahozer.the-movies";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CF8E8A5281A702A005BF7D5 /* Build configuration list for PBXProject "the-movies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CF8E8BF281A7030005BF7D5 /* Debug */,
+				4CF8E8C0281A7030005BF7D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CF8E8C1281A7030005BF7D5 /* Build configuration list for PBXNativeTarget "the-movies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CF8E8C2281A7030005BF7D5 /* Debug */,
+				4CF8E8C3281A7030005BF7D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CF8E8B6281A702A005BF7D5 /* the_movies.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CF8E8B7281A702A005BF7D5 /* the_movies.xcdatamodel */,
+			);
+			currentVersion = 4CF8E8B7281A702A005BF7D5 /* the_movies.xcdatamodel */;
+			path = the_movies.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4CF8E8A2281A702A005BF7D5 /* Project object */;
+}
