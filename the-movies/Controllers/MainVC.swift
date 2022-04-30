@@ -17,30 +17,31 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
     var frame: CGRect = CGRect(x:0, y:0, width:0, height:0)
     
     var films: [TableCell] = []
+    var dataList = [Result]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setDefaultSize(view: view)
         setUp()
         configurePageControl()
-        
+        upComingGetApi()
     }
     
     func configurePageControl() {
+        
         view.backgroundColor = .white
         
-        scrollView.frame = CGRect(x:0 * screenWidth, y: 0 * screenHeight, width:1 * screenWidth, height: 0.34 * screenHeight)
+        scrollView.frame = CGRect(x:0 * screenWidth, y: 0 * screenHeight, width:1 * screenWidth, height: 0.36 * screenHeight)
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         view.addSubview(scrollView)
         
-        pageControl.frame = CGRect(x:0 * screenWidth, y: 0.34 * screenHeight, width:1 * screenWidth, height: 0.03 * screenHeight)
+        pageControl.frame = CGRect(x:0 * screenWidth, y: 0.32 * screenHeight, width:1 * screenWidth, height: 0.03 * screenHeight)
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = 0
         pageControl.tintColor = UIColor.red
         pageControl.pageIndicatorTintColor = UIColor.gray
-        pageControl.currentPageIndicatorTintColor = UIColor.blue
+        pageControl.currentPageIndicatorTintColor = UIColor.white
         view.addSubview(pageControl)
         view.bringSubviewToFront(pageControl)
         
@@ -51,17 +52,17 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
         for index in 0..<5 {
             frame.origin.x = self.scrollView.frame.size.width * CGFloat(index)
             frame.size = self.scrollView.frame.size
-        }
+        
         
         let subView = UIView(frame: frame)
         subView.backgroundColor = .clear
         scrollView.addSubview(subView)
-        scrollView.backgroundColor = .gray
+ 
         
-        let BackgroundImageView = UIImageView()
-        BackgroundImageView.frame = CGRect(x:0 * screenWidth, y: 0 * screenHeight, width:1 * screenWidth, height: 0.34 * screenHeight)
-        BackgroundImageView.image = UIImage(named: "Moonrise Kingdom")
-        subView.addSubview(BackgroundImageView)
+        let backgroundImageView = UIImageView()
+        backgroundImageView.frame = CGRect(x:0 * screenWidth, y: 0 * screenHeight, width:1 * screenWidth, height: 0.36 * screenHeight)
+        backgroundImageView.image = UIImage(named: "Moonrise Kingdom")
+        subView.addSubview(backgroundImageView)
         
         let label = UILabel(frame: CGRect(x: 0.05 * screenWidth, y: 0.16 * screenHeight, width: 0.9 * screenWidth, height: 0.1 * screenHeight))
         label.text = "Moonrise Kingdom (2001)"
@@ -74,7 +75,7 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
         let subTitle = UILabel(frame: CGRect(x: 0.05 * screenWidth, y: 0.22 * screenHeight, width: 0.9 * screenWidth, height: 0.1 * screenHeight))
         subTitle.text = "123"
         subTitle.textAlignment = .left
-        label.numberOfLines = 2
+        subTitle.numberOfLines = 2
         subTitle.textColor = .lightGray
         subTitle.font = font_DmSansRegular(size: 20)
         subView.addSubview(subTitle)
@@ -82,7 +83,7 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
         let label2 = UILabel(frame: CGRect(x: 0.05 * screenWidth, y: 0.2 * screenHeight, width: 0.9 * 1.5 * screenWidth, height: 0.1 * screenHeight))
         label2.text = ""
         label2.textAlignment = .left
-        label.numberOfLines = 1
+        label2.numberOfLines = 1
         label2.textColor = .white
         label2.font = font_DmSansMedium(size: 16)
         scrollView.addSubview(label2)
@@ -90,7 +91,7 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
         let subTitle2 = UILabel(frame: CGRect(x: 0.05 * screenWidth, y: 0.24 * screenHeight, width: 0.9 * 1.5 * screenWidth, height: 0.1 * screenHeight))
         subTitle2.text = ""
         subTitle2.textAlignment = .left
-        label.numberOfLines = 2
+        subTitle2.numberOfLines = 2
         subTitle2.textColor = .lightGray
         subTitle2.font = font_DmSansRegular(size: 14)
         scrollView.addSubview(subTitle2)
@@ -102,16 +103,44 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.frame = CGRect(x: 0 * screenWidth, y: 0.37 * screenHeight, width: 1 * screenWidth, height: 0.63 * screenHeight)
+        tableView.frame = CGRect(x: 0 * screenWidth, y: 0.36 * screenHeight, width: 1 * screenWidth, height: 0.64 * screenHeight)
         tableView.backgroundColor = .white
         tableView.rowHeight = 140
-        tableView.reloadData()
         tableView.register(TableCell.self, forCellReuseIdentifier: "cell")
         tableView.tableFooterView = UIView(frame: .zero)
+        tableView.reloadData()
         view.addSubview(tableView)
-        
-        
+            
+            UIView.animate(withDuration: 0.2) { [self] in
+                self.tableView.setContentOffset(.init(x: view.frame.size.width, y: tableView.frame.maxY + 70), animated: false)
+                backgroundImageView.alpha = 1
+            }
+            
+        }
+            
     }
+    
+    func upComingGetApi(){
+        
+//        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "http://api.themoviedb.org/3/movie/upcoming?api_key=2a31a20cac3ff1a2105d8a8dc224479d&language=en-US&page=1")!)){
+//            (data,response,error) in
+//
+//            do{
+//                let result = try! JSONDecoder().decode(MoviesUpcoming.self, from: data!)
+//
+//                DispatchQueue.main.async {
+//                    print("results are here \(result.results)")
+//                    self.dataList = result.results
+//                    self.tableView.reloadData()
+//                }
+//
+//            }catch{
+//                print("catch working")
+//            }
+//
+//        }.resume()
+    }
+    
     
     @objc func changePage(sender: AnyObject) -> () {
         let x = CGFloat(pageControl.currentPage) * scrollView.frame.size.width
@@ -125,16 +154,14 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
     
     //MARK: - Add Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return dataList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableCell.cell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableCell.cell, for: indexPath) as! TableCell
         let selectedIndexPaths = tableView.indexPathsForSelectedRows
         let rowIsSelected = selectedIndexPaths != nil && selectedIndexPaths!.contains(indexPath)
-        
-        
+        cell.onBind(data: dataList[indexPath.row])
         return cell
     }
     
@@ -145,43 +172,7 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
     }
     
     
-    
-    
-    //    func createSlides() -> [Slide] {
-    //        slideImage1.image = UIImage(named: "ic_onboarding_1")
-    //
-    //        slideLabel1.text = "A real-life bear"
-    //
 
-    //        slideDescLabel1.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
-    //
-    //
-    //        slideImage2.image = UIImage(named: "ic_onboarding_2")
-    //
-    //
-    //        slideLabel2.text = "A real-life bear"
-    //
-    //        slideDescLabel2.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
-    //
-    //        slideImage3.image = UIImage(named: "ic_onboarding_3")
-    //
-    //        slideLabel3.text = "A real-life bear"
-    //
-    //        slideDescLabel3.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
-    //
-    //        slideImage4.image = UIImage(named: "ic_onboarding_4")
-    //
-    //
-    //        slideLabel4.text = "A real-life bear"
-    //        slideDescLabel4.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
-    //
-    //        slideImage5.image = UIImage(named: "ic_onboarding_5")
-    //        slideLabel5.text = "A real-life bear"
-    //        slideDescLabel5.text = "Did you know that Winnie the chubby little cubby was based on a real, young bear in London"
-    //        slideLabel1, slideLabel2, slideLabel3, slideLabel4, slideLabel5, slideDescLabel1, slideDescLabel2, slideDescLabel3, slideDescLabel4, slideDescLabel5
-    
-    //        return [slideLabel5]
-    //    }
     
 }
 

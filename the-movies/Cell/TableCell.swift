@@ -28,8 +28,12 @@ class TableCell: UITableViewCell {
         
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
     required init?(coder: NSCoder) { // Override init ile birlikte required init, program çökmesine karşı otomatik oluşturuldu.
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder:) fatal error has not been implemented")
     }
     
     func addSubview(){
@@ -81,6 +85,26 @@ class TableCell: UITableViewCell {
         labelDes.frame = CGRect(x: 0.47 * screenWidth, y: 1.2 * screenHeight, width: 0.73 * screenWidth, height: 1.16 * screenHeight)
         labelDate.frame = CGRect(x: 0.85 * screenWidth, y: 2.5 * screenHeight, width: 0.35 * screenWidth, height: 0.6 * screenHeight)
         
+    }
+    
+    func onBind(data:Result){
+        
+        labelName.text = data.title
+        labelDes.text = data.overview
+        labelDate.text = data.releaseDate
+        
+        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://image.tmdb.org/t/p/w342/\(data.posterPath)")!)){
+            (data,req,error) in
+            
+            do{
+                var datas = try data
+                DispatchQueue.main.async {
+                    self.movieImageView.image = UIImage(data: datas!)
+                }
+            }catch{
+                print("catch is working")
+            }
+        }.resume()
     }
     
     

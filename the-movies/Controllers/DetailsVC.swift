@@ -10,6 +10,7 @@ import UIKit
 class DetailsVC: UIViewController, UIScrollViewDelegate {
     
     let scrollView = UIScrollView()
+    static let shared = MainVC()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,10 +84,10 @@ class DetailsVC: UIViewController, UIScrollViewDelegate {
         letterTitleLabel.font = font_DmSansBold(size: 18)
         scrollView.addSubview(letterTitleLabel)
         
-        let letterDescriptionLabel = UILabel(frame: CGRect(x: 0.03 * screenWidth, y: 0.4045 * screenHeight, width: 0.96 * screenWidth, height: 0.52 * screenHeight))
+        let letterDescriptionLabel = UILabel(frame: CGRect(x: 0.03 * screenWidth, y: 0.4045 * screenHeight, width: 0.96 * screenWidth, height: 0.59 * screenHeight))
         letterDescriptionLabel.textAlignment = .left
         letterDescriptionLabel.textColor = .black
-        letterDescriptionLabel.text = "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+        letterDescriptionLabel.text = "Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description "
         letterDescriptionLabel.numberOfLines = 0
         letterDescriptionLabel.font = font_DmSansMedium(size: 15)
         scrollView.addSubview(letterDescriptionLabel)
