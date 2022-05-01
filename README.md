@@ -26,10 +26,10 @@ Bu bizim ilk ve ana ekranımızdır. Bu ekranda, şu anda oynatılan filmler iç
 ## Film Detay Ekranı
 Bu uygulamamızın son sayfasıdır. Bu ekranda ekranın üst kısmında bir film görüntüsü veriyoruz. Film görüntüsünün altında derecelendirme, çıkış tarihi, IMDB simgesi, başlık ve açıklama var. Açıklama, uzunluğuna göre sığmaktadır. Bu ekran tamamen kaydırmalıdır, yani kullanıcı aşağı kaydırdığında film görüntüsü ve diğer tüm öğeler kaydırılmaktadır.
 
-### Ekran Gereksinimleri
+### Ekran Gereksinimleri
 ● API, Sayfalandırmalar ve Ekranı Yenilemek İçin Çekme Opsiyonelleri
 ● imdb_id ile IMDB yönlendirmesi
-● Hata ve Yük tutamacı
+● Hata ve Yük Yakalama
 
 ## Gerekli API'ler
 ● /movie/now_playing - yaklaşan filmler için
