@@ -32,6 +32,6 @@ Bu uygulamamızın son sayfasıdır. Bu ekranda ekranın üst kısmında bir fil
 ● Hata ve Yük tutamacı
 
 ## Gerekli API'ler
-● /movie/now_playing.
-● /movie/upcoming liste için.
-● /movie/{movie_id}. film detayları için
+● /movie/now_playing - yaklaşan filmler için
+● /movie/upcoming - liste için.
+● /movie/{movie_id} - film detayları için
