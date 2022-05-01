@@ -15,8 +15,7 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
     
     var pages:[UIColor] = [UIColor.red, UIColor.blue, UIColor.green, UIColor.yellow, UIColor.gray]
     var frame: CGRect = CGRect(x:0, y:0, width:0, height:0)
-    
-    var films: [TableCell] = []
+
     var dataList = [Result]()
     
     override func viewDidLoad() {
@@ -52,6 +51,9 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
         for index in 0..<5 {
             frame.origin.x = self.scrollView.frame.size.width * CGFloat(index)
             frame.size = self.scrollView.frame.size
+
+        }
+        
         
         
         let subView = UIView(frame: frame)
@@ -106,7 +108,7 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
         tableView.frame = CGRect(x: 0 * screenWidth, y: 0.36 * screenHeight, width: 1 * screenWidth, height: 0.64 * screenHeight)
         tableView.backgroundColor = .white
         tableView.rowHeight = 140
-        tableView.register(TableCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(TableCell.self, forCellReuseIdentifier: TableCell.cell)
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.reloadData()
         view.addSubview(tableView)
@@ -116,29 +118,44 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
                 backgroundImageView.alpha = 1
             }
             
-        }
-            
     }
-    
-    func upComingGetApi(){
+
+    func upComingGetApi() {
         
-//        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "http://api.themoviedb.org/3/movie/upcoming?api_key=2a31a20cac3ff1a2105d8a8dc224479d&language=en-US&page=1")!)){
-//            (data,response,error) in
-//
-//            do{
-//                let result = try! JSONDecoder().decode(MoviesUpcoming.self, from: data!)
-//
-//                DispatchQueue.main.async {
-//                    print("results are here \(result.results)")
-//                    self.dataList = result.results
-//                    self.tableView.reloadData()
-//                }
-//
-//            }catch{
-//                print("catch working")
-//            }
-//
-//        }.resume()
+        guard let url = URL(string: "https://api.themoviedb.org/3/movie/upcoming?api_key=2a31a20cac3ff1a2105d8a8dc224479d&language=en-US&page=1") else {
+            fatalError("Invalid URL")
+        }
+        
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        
+        let task = session.dataTask(with: url) { data, response, error in
+            
+            if error != nil {
+                print("Error with fetching: \(error)")
+                return
+            }
+            
+            do{
+                if let data = data {
+                    
+                    let result = try JSONDecoder().decode(MoviesUpcoming.self, from: data)
+                    
+                    DispatchQueue.main.async {
+                        
+                        print("results are here \(result.results)")
+                        self.dataList = result.results
+                        self.tableView.reloadData()
+                        
+                    }
+                }
+            }
+            catch{
+                print("sadasd")
+            }
+        }
+        
+        task.resume()
     }
     
     
@@ -159,8 +176,7 @@ class MainVC: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableCell.cell, for: indexPath) as! TableCell
-        let selectedIndexPaths = tableView.indexPathsForSelectedRows
-        let rowIsSelected = selectedIndexPaths != nil && selectedIndexPaths!.contains(indexPath)
+        
         cell.onBind(data: dataList[indexPath.row])
         return cell
     }

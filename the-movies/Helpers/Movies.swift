@@ -4,9 +4,9 @@
 //
 //  Created by Beytullah Özer on 30.04.2022.
 //
-
-//   let moviesUpcoming = try? newJSONDecoder().decode(MoviesUpcoming.self, from: jsonData)
 // http://api.themoviedb.org/3/movie/upcoming?api_key=2a31a20cac3ff1a2105d8a8dc224479d
+
+
 import Foundation
 
 // MARK: - MoviesUpcoming
