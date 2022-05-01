@@ -12,7 +12,7 @@ Uygulamanın genel gereksinimlerini ve genel isteğe bağlı özellikleri tanım
 ● Temiz mimari tasarım kullanılmıştır.
 ● Kodlanabilir ve süregelir.
 ● Ağ Katmanı bulunmaktadır.
-
+● Postman API Datas Kullanımı
 ● Git, Gitflow, gitignore.
 ● Temiz kod stili.
 ● 3. part kütüphane soyutlama.
@@ -28,10 +28,11 @@ Bu uygulamamızın son sayfasıdır. Bu ekranda ekranın üst kısmında bir fil
 
 ### Ekran Gereksinimleri
 ● API, Sayfalandırmalar ve Ekranı Yenilemek İçin Çekme Opsiyonelleri
-● imdb_id ile IMDB yönlendirmesi
 ● Hata ve Yük Yakalama
 
-## Gerekli API'ler
+## Gerekli Bazı API'ler
 ● /movie/now_playing - yaklaşan filmler için
 ● /movie/upcoming - liste için.
 ● /movie/{movie_id} - film detayları için
+● imdb_id ile IMDB yönlendirmesi
+
