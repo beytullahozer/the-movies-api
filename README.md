@@ -19,10 +19,13 @@ Uygulamanın genel gereksinimlerini ve genel isteğe bağlı özellikleri tanım
 ● MVVM Mimarisi
 ● Yüksek Dereceli İşlev kullanımı
 
+<br> 
 
-<img width="1357" alt="postman api variables image" src="https://user-images.githubusercontent.com/88663603/166152205-53fb98f6-4e51-4ad5-a045-8dc6ea17f70b.png">
-![Simulator Screen Shot - iPhone 12 Pro Max - 2022-04-30 at 21 33 53](https://user-images.githubusercontent.com/88663603/166152213-6e43767a-4404-4917-bed9-aec5f08470a1.png)
-![Simulator Screen Shot - iPhone 12 Pro Max - 2022-04-30 at 21 37 44](https://user-images.githubusercontent.com/88663603/166152219-d14772e3-7123-468f-9e96-d704dca50839.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/88663603/166152205-53fb98f6-4e51-4ad5-a045-8dc6ea17f70b.png" width="1000"> 
+  <img src="https://user-images.githubusercontent.com/88663603/166152213-6e43767a-4404-4917-bed9-aec5f08470a1.png" width="250"> 
+  <img src="https://user-images.githubusercontent.com/88663603/166152219-d14772e3-7123-468f-9e96-d704dca50839.png" width="250"> 
+</p>
 
 
 ## Main Ekranı
