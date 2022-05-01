@@ -1,4 +1,4 @@
-# the-movies
+# the-movies-app
 
 ## Giriş 
 The Movie Database (TMDb) API kullanılmaktadır. Başlamadan önce The Movie Database API'lerini kullanmak için doğru yapılandırmaları yapmanız gerekir.
