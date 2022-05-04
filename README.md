@@ -3,7 +3,9 @@
 ## Uygulama The Movie Database domain'inden veri çekmen bir API uygulamasıdır.
 ### Tüm veriler eksiksiz çalışmaktadır ve bir sayfada 2 farklı url kullanılmaktadır.
 ### --
-### Scroll sağ ve aşağı hareketi ile resim solgunlaştırılması, CollectionView tercih edilmesi, Bu tarz uygulamalarda label'ların önemi ve doğru kullanılması.
+### Scroll sağ ve aşağı hareketi ile resim solgunlaştırılmak.
+### CollectionView tercih etmek.
+### Label'ları verilere uygun kullanılmak.
 
 <br>
 <p align="center">
