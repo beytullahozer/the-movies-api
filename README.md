@@ -1,5 +1,10 @@
 # Movies Api
 
+## Uygulama The Movie Database domain'inden veri çekmen bir API uygulamasıdır.
+### Tüm veriler eksiksiz çalışmaktadır ve bir sayfada 2 farklı url kullanılmaktadır.
+### --
+### Scroll sağ ve aşağı hareketi ile resim solgunlaştırılması, CollectionView tercih edilmesi, Bu tarz uygulamalarda label'ların önemi ve doğru kullanılması.
+
 <br>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/88663603/166777120-4d79e627-37b2-4b61-b8c5-ff3fd458fbf1.png" width="250" />
