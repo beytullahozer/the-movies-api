@@ -10,6 +10,8 @@ var ScreenHeight_To_ScreenWidth_Converter = CGFloat()
 var lastObjectFrane = CGRect()
 var screen_ratio = CGFloat()
 
+let uDefaults = UserDefaults.standard
+
 func setDefaultSize(view : UIView){
     
     screenHeight = view.frame.size.height
@@ -87,10 +89,4 @@ func setGradientBackground() {
     //    self.view.layer.insertSublayer(gradientLayer, at:0)
     
 }
-
-
-// User Default
-
-let uDefaults = UserDefaults.standard
-
 

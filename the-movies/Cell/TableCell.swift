@@ -87,7 +87,7 @@ class TableCell: UITableViewCell {
         
     }
     
-    func onBind(data:Result){
+    func fetchDataToTableCell(data:Result){
         
         labelName.text = data.title
         labelDes.text = data.overview

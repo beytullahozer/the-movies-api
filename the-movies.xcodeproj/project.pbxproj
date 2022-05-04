@@ -120,6 +120,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4CB7C2472822F55100EC7C93 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CF8E8BB281A7030005BF7D5 /* LaunchScreen.storyboard */,
+				4CF8E8B9281A7030005BF7D5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4CF8E8A1281A702A005BF7D5 = {
 			isa = PBXGroup;
 			children = (
@@ -147,9 +156,8 @@
 				4C7109B7282031FF00391BDE /* Model */,
 				4CF8E8FD281A751D005BF7D5 /* Helpers */,
 				4CF8E8F6281A7120005BF7D5 /* Font */,
+				4CB7C2472822F55100EC7C93 /* Resources */,
 				4CF8E8F9281A718E005BF7D5 /* Core Data */,
-				4CF8E8B9281A7030005BF7D5 /* Assets.xcassets */,
-				4CF8E8BB281A7030005BF7D5 /* LaunchScreen.storyboard */,
 				4CF8E8BE281A7030005BF7D5 /* Info.plist */,
 			);
 			path = "the-movies";

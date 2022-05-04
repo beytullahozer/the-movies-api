@@ -5,6 +5,10 @@
 //  Created by Beytullah Özer on 28.04.2022.
 //
 
+
+// https://api.themoviedb.org/3/movie/:movie_id?api_key=2a31a20cac3ff1a2105d8a8dc224479d&language=en-US&page=1
+
+
 import UIKit
 import CoreData
 
@@ -15,12 +19,11 @@ class DetailsVC: UIViewController, UIScrollViewDelegate {
     
     var selected: Result?
     var dataList = [Result]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setDefaultSize(view: view)
         setUp()
-        fetchImage()
+        fetchDataMovieImage()
     }
 
     
@@ -48,7 +51,7 @@ class DetailsVC: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
         scrollView.frame = CGRect(x:0 * screenWidth, y: 0.13 * screenHeight, width:1 * screenWidth, height: 0.87 * screenHeight)
         scrollView.isPagingEnabled = true
-        scrollView.contentSize.height = 1000
+        scrollView.contentSize.height = 900
         view.addSubview(scrollView)
         
         movieImageView.image = UIImage()
@@ -56,9 +59,7 @@ class DetailsVC: UIViewController, UIScrollViewDelegate {
         scrollView.addSubview(movieImageView)
         
         let imdbImageView = UIImageView()
-        var showimage = UIImage()
-        
-        imdbImageView.image = showimage
+        imdbImageView.image = UIImage(named: "IMDB Logo")
         imdbImageView.frame = CGRect(x:0.03 * screenWidth, y: 0.35 * screenHeight, width: 0.13 * screenWidth, height: 0.037 * screenHeight)
         scrollView.addSubview(imdbImageView)
         
@@ -70,17 +71,17 @@ class DetailsVC: UIViewController, UIScrollViewDelegate {
         let rateLabel = UILabel(frame: CGRect(x: 0.264 * screenWidth, y: 0.35 * screenHeight, width: 0.4 * screenWidth, height: 0.04 * screenHeight))
         rateLabel.textAlignment = .left
         rateLabel.textColor = .black
-        rateLabel.text = String(selected?.voteAverage ?? 10); "/10"
+        rateLabel.text = String(selected?.voteAverage ?? 10.0) + String(" / 10")
         rateLabel.numberOfLines = 1
-        rateLabel.font = font_DmSansBold(size: 14)
+        rateLabel.font = font_DmSansMedium(size: 14)
         scrollView.addSubview(rateLabel)
         
-        let dateLabel = UILabel(frame: CGRect(x: 0.25 * screenWidth, y: 0.35 * screenHeight, width: 0.5 * screenWidth, height: 0.04 * screenHeight))
+        let dateLabel = UILabel(frame: CGRect(x: 0.28 * screenWidth, y: 0.35 * screenHeight, width: 0.5 * screenWidth, height: 0.04 * screenHeight))
         dateLabel.textAlignment = .center
         dateLabel.textColor = .black
         dateLabel.text = selected?.releaseDate ?? "No fetch data."
         dateLabel.numberOfLines = 1
-        dateLabel.font = font_DmSansMedium(size: 15)
+        dateLabel.font = font_DmSansMedium(size: 14)
         scrollView.addSubview(dateLabel)
         
         let letterTitleLabel = UILabel(frame: CGRect(x: 0.03 * screenWidth, y: 0.4085 * screenHeight, width: 0.97 * screenWidth, height: 0.03 * screenHeight))
@@ -89,70 +90,42 @@ class DetailsVC: UIViewController, UIScrollViewDelegate {
         letterTitleLabel.text = selected?.originalTitle ?? "No fetch data."
         letterTitleLabel.numberOfLines = 1
         letterTitleLabel.font = font_DmSansBold(size: 18)
+        letterTitleLabel.sizeToFit()
         scrollView.addSubview(letterTitleLabel)
         
-        let letterDescriptionLabel = UILabel(frame: CGRect(x: 0.03 * screenWidth, y: 0.47 * screenHeight, width: 0.94 * screenWidth, height: 0.53 * screenHeight))
+        let letterDescriptionLabel = UILabel(frame: CGRect(x: 0.03 * screenWidth, y: 0.45 * screenHeight, width: 0.94 * screenWidth, height: 0.55 * screenHeight))
         letterDescriptionLabel.textAlignment = .justified
         letterDescriptionLabel.textColor = .black
         letterDescriptionLabel.text = selected?.overview ?? "No fetch data."
         letterDescriptionLabel.numberOfLines = 0
+        letterDescriptionLabel.font = font_DmSansRegular(size: 15)
+        letterDescriptionLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         letterDescriptionLabel.sizeToFit()
-        letterDescriptionLabel.font = font_DmSansMedium(size: 15)
         scrollView.addSubview(letterDescriptionLabel)
         
     }
     
-    func fetchImage(){
-        
-        let urlString = "https://image.tmdb.org/t/p/w500/\(selected?.posterPath)"
-        
-        guard let url = URL(string: urlString) else {
-            return
-        }
-        
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
-        
-        let task = session.dataTask(with: url) { data, _, error in
-            
-            if error != nil {
-                print("Error with fetching: \(error)")
-                return
-            }
+    
+    func fetchDataMovieImage(){
+        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://image.tmdb.org/t/p/w500/\(selected!.posterPath)")!)){
+            (data,req,error) in
             
             do{
-                if let data = data {
-                    
-                    let result = try JSONDecoder().decode(Movies.self, from: data)
-                    
-                    DispatchQueue.main.async {
-                        
-                        print("results are here \(result.results)")
-                        self.dataList = result.results
-                    
-                        
-                        let data = try? Data(contentsOf: url)
-                            if let imageData = data {
-                                let image = UIImage(data: imageData)
-                                self.movieImageView.image = image
-                            }else {
-                                self.movieImageView.image = UIImage(named: "SomeEmptyImage")
-                                
-                            }
-                    }
-                    
-                } else {
-                    print("URLSession dataTask error:", error ?? "nil")
+                var datas = try data
+                DispatchQueue.main.async {
+                    self.movieImageView.image = UIImage(data: datas!)
+                    self.movieImageView.clipsToBounds = true
+                    self.movieImageView.contentMode = .scaleAspectFill
                 }
-                
             }catch{
-                print("JSONSerialization error:", error)
+                print("catch is working")
             }
         }
-        
-        task.resume()
-    
+        .resume()
     }
+    
+    
+    
     
     
     @objc func backClicked(){

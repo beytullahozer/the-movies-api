@@ -9,67 +9,82 @@ import UIKit
 
 class CollectionCell: UICollectionViewCell {
     
-    static var collectionCell = "collectionCell"
+    static var collectionCell = "cell"
     
-    var movieImageView = UIImageView()
+    var movieWebImageView = UIImageView()
     var titleLabel = UILabel()
     var desLabel = UILabel()
-
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setDefaultSize(view: contentView)
+        
+        addSubview()
+        configureLabels()
+        configureImageViews()
+        setConstraits()
+ 
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     func addSubview(){
-        contentView.addSubview(movieImageView)
+        contentView.addSubview(movieWebImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(desLabel)
+        
     }
     
     func configureImageViews(){
-        movieImageView.clipsToBounds = true
-        movieImageView.image = UIImage(named: "American Beauty")
-        movieImageView.contentMode = .scaleAspectFit
+        movieWebImageView.clipsToBounds = true
+        movieWebImageView.contentMode = .scaleAspectFill
+        movieWebImageView.alpha = 0.7
     
-       
     }
     
     func configureLabels(){ // Label özellikleri oluşturuldu.
-        titleLabel.numberOfLines = 0
-        titleLabel.text = "Moonrise Kingdom (2001)"
-        titleLabel.textColor = .black
+        titleLabel.numberOfLines = 1
+        titleLabel.text = ""
+        titleLabel.textColor = .white
         titleLabel.textAlignment = .left
-        titleLabel.font = font_DmSansBold(size: 350)
+        titleLabel.font = font_DmSansBold(size: 67)
         
         desLabel.numberOfLines = 2
-        desLabel.text = "Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description "
-        desLabel.textColor = .darkGray
+        desLabel.text = ""
+        desLabel.textColor = .white
         desLabel.textAlignment = .left
-        desLabel.font = font_DmSansMedium(size: 260)
+        desLabel.font = font_DmSansMedium(size: 50)
         
     }
     
     func setConstraits(){
         
-        movieImageView.frame = CGRect(x: 0.04 * screenWidth, y: 0.25 * screenHeight, width: 0.36 * screenWidth, height: 0.36 * screenWidth)
-        titleLabel.frame = CGRect(x: 0.05 * screenWidth, y: 0.16 * screenHeight, width: 0.9 * screenWidth, height: 0.1 * screenHeight)
-        titleLabel.backgroundColor = .blue
-        desLabel.frame = CGRect(x: 0.05 * screenWidth, y: 0.22 * screenHeight, width: 0.9 * screenWidth, height: 0.1 * screenHeight)
+        movieWebImageView.frame = CGRect(x: 0 * screenWidth, y: -0.076 * screenHeight, width: 1 * screenWidth, height: 1.1 * screenHeight)
+        titleLabel.frame = CGRect(x: 0.033 * screenWidth, y: 0.5 * screenHeight, width: 0.96 * screenWidth, height: 0.2 * screenHeight)
+        desLabel.frame = CGRect(x: 0.033 * screenWidth, y: 0.65 * screenHeight, width: 0.96 * screenWidth, height: 0.28 * screenHeight)
         
     }
     
-    func onBindCollection(data:Result){
+    func fetchDataToCollectionCell(data:Result){
         
         titleLabel.text = data.originalTitle
         desLabel.text = data.overview
         
         
-        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "image.tmdb.org/t/p/w500/\(data.posterPath)")!)){
+        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "https://image.tmdb.org/t/p/w500/\(data.posterPath)")!)){
             (data,req,error) in
             
             do{
                 var datas = try data
                 DispatchQueue.main.async {
-                    self.movieImageView.image = UIImage(data: datas!)
-                    self.movieImageView.layer.cornerRadius = 14
-                    self.movieImageView.clipsToBounds = true
-                    self.movieImageView.contentMode = .scaleAspectFill
+                    self.movieWebImageView.image = UIImage(data: datas!)
+                    self.movieWebImageView.clipsToBounds = true
+                    self.movieWebImageView.contentMode = .scaleAspectFill
+                    self.movieWebImageView
                 }
             }catch{
                 print("catch is working")
