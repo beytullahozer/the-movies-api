@@ -4,10 +4,13 @@
 ## Definition
 Uygulama The Movie Database domain'inden veri çeken bir API uygulamasıdır.
 <br>
+
 Tüm veriler eksiksiz çalışmaktadır ve bir sayfada 2 farklı url kullanılmaktadır.
 
 Scroll sağ ve aşağı hareketi ile resim solgunlaştırılmak.
+
 CollectionView tercih etmek.
+
 Label'ları verilere uygun kullanılmak.
 
 <br>
