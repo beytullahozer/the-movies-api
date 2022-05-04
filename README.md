@@ -1,6 +1,9 @@
 # Movies Api
+<br>
 
-## Uygulama The Movie Database domain'inden veri çekmen bir API uygulamasıdır.
+## Definition
+Uygulama The Movie Database domain'inden veri çeken bir API uygulamasıdır.
+<br>
 ### Tüm veriler eksiksiz çalışmaktadır ve bir sayfada 2 farklı url kullanılmaktadır.
 ### --
 ### Scroll sağ ve aşağı hareketi ile resim solgunlaştırılmak.
