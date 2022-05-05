@@ -2,7 +2,9 @@
 <br>
 
 <p align="center">
+  
 ## Definition
+  
 <br>
 
 The application uses REST architecture and services with The Movie Database domain.
