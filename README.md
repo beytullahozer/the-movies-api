@@ -2,8 +2,7 @@
 <br>
 
 <p align="center">
-  
-## Definition
+  ## Definition
   
 <br>
 
