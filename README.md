@@ -4,7 +4,7 @@
 ## Definition
 <br>
 
-Uygulama The Movie Database domain'i ile REST mimarisi ve servisleri kullanır. 
+The application uses REST architecture and services with The Movie Database domain.
 <br>
 
 It use The Movie Database (TMDb) api’s. Before you start you need to do correct configurations to use The Movie Database api’s.
