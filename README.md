@@ -2,7 +2,7 @@
 <br>
 
 ## Definition
-Uygulama The Movie Database domain'inden veri çeken bir API uygulamasıdır.
+Uygulama The Movie Database domain'i ile REST mimarisi ve servisleri kullanır. 
 <br>
 
 Tüm veriler eksiksiz çalışmaktadır ve bir sayfada 2 farklı url kullanılmaktadır.
