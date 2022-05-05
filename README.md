@@ -1,8 +1,7 @@
 # Movies Api
 <br>
 
-<p align="center">
-  ## Definition
+## Definition
   
 <br>
 
